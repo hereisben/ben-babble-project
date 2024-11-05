@@ -141,6 +141,7 @@ h3 {
   }
 }
 .subs .subs-container .bottom-subs .subs-getter-box .subs-btn, .rank .rank-info .rank-info__btn, .hero .hero-info .hero-info__action .hero-info__action--left-cta-btn, .episodes .top-episodes .episodes-pc-btn, .episodes .episodes-tablet-btn, .category .category-btn, .header .auth-bar .auth-bar__signup-jar {
+  cursor: pointer;
   display: block;
   width: 15.7rem;
   height: 6.4rem;
@@ -169,6 +170,7 @@ h3 {
   gap: 1.2rem;
 }
 .quotes .quotes-thumb .quotes-switch > label, .episodes .episodes-switch .episodes-switch-box > label {
+  cursor: pointer;
   width: 0.8rem;
   height: 0.8rem;
   background-color: #d8d5de;

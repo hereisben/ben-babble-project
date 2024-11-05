@@ -394,7 +394,8 @@
     left: 0rem;
     transform: translateX(100vw);
     z-index: 10;
-    transition: transform 0.75s;
+    transition: 0.75s;
+    visibility: hidden;
   }
   .header .row .mobile-nav .mobile-nav__layer--check {
     position: absolute;
@@ -402,6 +403,7 @@
   }
   .header .row .mobile-nav .mobile-nav__layer--check:checked + .mobile-nav__layer {
     transform: translateX(0rem);
+    visibility: visible;
   }
 }
 @media (max-width: 767.98px) {
