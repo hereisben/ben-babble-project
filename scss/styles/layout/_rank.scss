@@ -1,0 +1,99 @@
+@use "../utils/" as utils;
+@use "../components/" as compo;
+@use "../base/" as base;
+
+.rank {
+  padding-top: 16rem;
+
+  /*LEFT RANK*/
+  .rank-info {
+    position: relative;
+
+    .rank-info__heading {
+      @extend %isAbsoluted;
+      z-index: 1;
+      top: 4.5rem;
+      left: 0rem;
+    }
+
+    .rank-info__desc {
+      padding-top: calc(32.7rem - 16rem);
+      @extend %desc-2;
+    }
+
+    .rank-info__btn {
+      margin-top: 3.8rem;
+      @extend %purple-btn;
+
+      .rank-info__btn--link {
+        gap: 0.8rem;
+
+        .rank-info__btn--text-link {
+          @extend %btn-link-1;
+        }
+
+        .rank-info__btn--vector-link {
+          width: 1.8rem;
+          height: 1.8rem;
+        }
+      }
+    }
+
+    .rank-info__vector {
+      @extend %isAbsoluted;
+      top: 12.1rem;
+      right: 5.9rem;
+    }
+  }
+
+  /*RIGHT RANK*/
+  .clients-group {
+    position: relative;
+    height: 39.9rem;
+
+    > * {
+      @extend %isAbsoluted;
+    }
+
+    .clients-group__item {
+      z-index: 1;
+
+      &.red-client {
+        left: 0rem;
+        top: calc(32.4rem - 16rem);
+      }
+
+      &.podcast-client {
+        top: 0rem;
+        right: 23.7rem;
+      }
+
+      &.cloud-client {
+        right: 0rem;
+        top: 5.7rem;
+      }
+
+      &.spotify-client {
+        bottom: 0rem;
+        right: 27.5rem;
+      }
+
+      &.unknown-client {
+        right: 4.8rem;
+        bottom: 4rem;
+      }
+    }
+
+    .clients-group__background {
+      @extend %isCircle;
+      @extend %isAbsoluted;
+      top: 5.6rem;
+      right: 14.1rem;
+      width: 28.7rem;
+      height: 28.7rem;
+      opacity: 0.4;
+      background: #ff9051;
+      filter: blur(129px);
+    }
+  }
+}

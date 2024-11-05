@@ -1,0 +1,38 @@
+@media (max-width: 991.98px) {
+  .header {
+    .header-nav {
+      margin-left: 2.2rem;
+      .header-nav__list {
+        gap: 3.8rem;
+
+        .header-nav__item {
+          &.header-nav__item--episodes:hover,
+          &.header-nav__item--episodes:has(
+              .header-nav__subitem--checkbox:checked
+            ) {
+            width: 7.7rem;
+          }
+
+          &.header-nav__item--trending:hover,
+          &.header-nav__item--trending:has(
+              .header-nav__subitem--checkbox:checked
+            ) {
+            width: 7.1rem;
+          }
+
+          &.header-nav__item--category:hover,
+          &.header-nav__item--category:has(
+              .header-nav__subitem--checkbox:checked
+            ) {
+            width: 7.8rem;
+          }
+
+          &.header-nav__item--blog:hover,
+          &.header-nav__item--blog:has(.header-nav__subitem--checkbox:checked) {
+            width: 5.1rem;
+          }
+        }
+      }
+    }
+  }
+}

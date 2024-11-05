@@ -1,0 +1,80 @@
+@media (min-width: 768px) {
+  .episodes {
+    &:has(#episodes-choice__pc--first-choice:checked)
+      .episodes-switch-box__dot--first-dot,
+    &:has(#episodes-choice__pc--second-choice:checked)
+      .episodes-switch-box__dot--second-dot,
+    &:has(#episodes-choice__pc--third-choice:checked)
+      .episodes-switch-box__dot--third-dot {
+      width: 1.2rem;
+      height: 1.2rem;
+      background-color: #936cdd;
+    }
+
+    .episodes-choice__pc {
+      display: block;
+      position: absolute;
+      top: 0rem;
+      left: 0rem;
+      visibility: hidden;
+    }
+
+    .bottom-episodes {
+      display: none;
+    }
+
+    .episodes-switch {
+      &.episodes-switch__pc {
+        display: flex;
+      }
+    }
+
+    .episodes-choice__pc:checked + .bottom-episodes {
+      display: flex;
+    }
+
+    .episodes-tablet-btn {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .episodes {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+
+    .top-episodes {
+      .episodes-info {
+        .episodes-info__vector {
+          width: 9rem;
+          top: 2.6rem;
+          right: 6.7rem;
+        }
+      }
+
+      .episodes-pc-btn {
+        margin-top: 0rem;
+      }
+    }
+
+    .bottom-episodes {
+      padding-top: 8.4rem;
+      flex-wrap: nowrap;
+      overflow: hidden;
+      .episodes-item {
+        .episodes-item__thumb,
+        .episodes-item__detail {
+          height: 20rem;
+        }
+
+        .episodes-item__thumb {
+        }
+      }
+    }
+
+    .episodes-switch {
+      margin-top: 5.5rem;
+    }
+  }
+}

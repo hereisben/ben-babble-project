@@ -1,0 +1,140 @@
+@use "../base/" as base;
+@use "../utils/" as utils;
+@use "../components/" as compo;
+
+/*HEADER */
+
+.header {
+  position: sticky;
+  top: -3.2rem;
+  z-index: 9;
+  user-select: none;
+  padding-top: 4.2rem;
+  padding-bottom: 1rem;
+  background-color: #{utils.$floral-white-color};
+
+  /*LOGO JAR*/
+  .header-logo-jar {
+    @extend %alignmentBox;
+    height: 4.8rem;
+    .logo-link {
+      width: 11.612rem;
+      height: 2.6rem;
+      @extend %flexBox;
+      .logo-icon {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  /*NAVBAR*/
+  .header-nav {
+    margin-left: 8.2rem;
+    height: 100%;
+    @extend %alignmentBox;
+    .header-nav__list {
+      @extend %flexBox;
+      gap: 4.8rem;
+
+      .header-nav__item {
+        position: relative;
+
+        &:hover {
+          label {
+            display: block;
+          }
+        }
+
+        &.header-nav__item--episodes:hover,
+        &.header-nav__item--episodes:has(
+            .header-nav__subitem--checkbox:checked
+          ) {
+          width: 8.7rem;
+        }
+
+        &.header-nav__item--trending:hover,
+        &.header-nav__item--trending:has(
+            .header-nav__subitem--checkbox:checked
+          ) {
+          width: 8.1rem;
+        }
+
+        &.header-nav__item--category:hover,
+        &.header-nav__item--category:has(
+            .header-nav__subitem--checkbox:checked
+          ) {
+          width: 8.8rem;
+        }
+
+        &.header-nav__item--blog:hover,
+        &.header-nav__item--blog:has(.header-nav__subitem--checkbox:checked) {
+          width: 5.1rem;
+        }
+
+        .header-nav__item--link {
+          display: inline-block;
+          @extend %desc-2;
+        }
+
+        label {
+          @extend %isAbsoluted;
+          cursor: pointer;
+          width: 0.8rem;
+          height: 0.8rem;
+          display: none;
+          border: 1px solid;
+          border-color: transparent transparent #{utils.$dim-gray-color} #{utils.$dim-gray-color};
+          right: 0rem;
+          top: 0.9rem;
+          transform: rotate(-45deg);
+          z-index: 1;
+          background-color: #{utils.$floral-white-color};
+        }
+
+        input {
+          @extend %isAbsoluted;
+          right: 0rem;
+          bottom: 0.75rem;
+          visibility: hidden;
+
+          &:checked + .header-nav__sublist .header-nav__subitem--link {
+            display: block;
+          }
+        }
+
+        .header-nav__sublist {
+          .header-nav__subitem--link {
+            @extend %desc-2;
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  /* Auth Bar*/
+  .auth-bar {
+    gap: 2.8rem;
+    justify-content: right;
+
+    @extend %alignmentBox;
+
+    .auth-bar__login-link {
+      @extend %text-link-2;
+      color: #{utils.$dark-gunmetal-color};
+    }
+
+    .auth-bar__signup-jar {
+      @extend %black-btn;
+      width: 11.6rem;
+      height: 4.8rem;
+      border-radius: 0.6rem;
+      background-color: #{utils.$dark-gunmetal-color};
+
+      .auth-bar__signup-jar--signup-link {
+        @extend %btn-link-2;
+      }
+    }
+  }
+}

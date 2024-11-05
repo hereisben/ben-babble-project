@@ -1,0 +1,98 @@
+@use "../utils/" as utils;
+@use "../components/" as compo;
+@use "../base/" as base;
+
+.footer {
+  background-color: #{utils.$floral-white-color};
+  padding-top: 10.4rem;
+  padding-bottom: 3.8rem;
+
+  .left-footer {
+    > * {
+      display: block;
+    }
+
+    .left-footer__logo {
+      width: 11.612rem;
+      height: 2.6rem;
+
+      .left-footer__logo--icon {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .left-footer__copyright {
+      margin-top: 1.4rem;
+      @extend %desc-2;
+    }
+
+    .left-footer__social {
+      margin-top: 1.8rem;
+      @extend %alignmentBox;
+      gap: 1.4rem;
+
+      .left-footer__social--item {
+        width: 3.6rem;
+        height: 3.6rem;
+        @extend %isCircle;
+        background-color: #{utils.$dark-gunmetal-color};
+        overflow: hidden;
+
+        .left-footer__social--item-link {
+          width: 100%;
+          height: 100%;
+          @extend %perfectCentered;
+        }
+
+        &:hover {
+          background-color: #{utils.$medium-purple-color};
+        }
+      }
+    }
+  }
+
+  .mid-footer {
+    margin-left: 8.6rem;
+
+    .mid-footer__nav {
+      .mid-footer__nav--head-list {
+        @extend %flexBox;
+        gap: 9rem;
+
+        .mid-footer__nav--head-item {
+          .mid-footer__nav--sub-list {
+            margin-top: 2.4rem;
+            @extend %flexBox;
+            flex-direction: column;
+            gap: 1.6rem;
+
+            .mid-footer__nav--sub-item {
+              .mid-footer__nav--sub-item__link {
+                @extend %desc-2;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .right-footer {
+    .right-footer__client-group {
+      margin-top: 2.4rem;
+      @extend %alignmentBox;
+      gap: 1.6rem;
+
+      .right-footer__client-item {
+        width: 3.6rem;
+        height: 3.6rem;
+
+        .right-footer__client-icon {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}

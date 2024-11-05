@@ -1,0 +1,267 @@
+@use "../utils/" as utils;
+@use "../components/" as compo;
+@use "../base/" as base;
+
+.hero {
+  background-color: #{utils.$floral-white-color};
+  padding-top: 10rem;
+  padding-bottom: 14rem;
+
+  /*LEFT MEDIA BOX*/
+  .left-media-box {
+    position: relative;
+
+    .left-media-box__thumb {
+      @extend %thumb;
+
+      height: 30.2rem;
+      .left-media-box__thumb--image {
+      }
+    }
+
+    .left-media-box__media-tool-bar {
+      width: 19.4rem;
+      height: 6rem;
+      border-radius: 0.9rem;
+      background-color: white;
+      box-shadow: 0px 12px 44px 0px rgba(32, 24, 48, 0.07);
+      top: 27.2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      gap: 1.2rem;
+      @extend %isAbsoluted;
+      @extend %perfectCentered;
+
+      .left-media-box__media-tool-bar--btn {
+        width: 2.6rem;
+        height: 2.6rem;
+        border-radius: 2.6rem;
+        border: 1px solid #{utils.$medium-purple-color};
+        background-color: transparent;
+        @extend %perfectCentered;
+
+        &:hover {
+          border-width: 2px;
+        }
+
+        .left-media-box__media-tool-bar--triangle-vector {
+          width: 0.6rem;
+          height: 0.6rem;
+          transform: translateX(1px);
+        }
+
+        .left-media-box__media-tool-bar--rectangle-vector {
+          width: 11.4rem;
+          height: 2.6rem;
+        }
+      }
+    }
+
+    .podcast-jar {
+      margin-top: 5.3rem;
+
+      .podcast-jar__label {
+        display: block;
+        @extend %text-link-3;
+      }
+
+      .podcast-jar__avatar-group {
+        margin-top: 1rem;
+        @extend %flexBox;
+
+        .podcast-jar__avatar-item {
+          width: 4.8rem;
+          height: 4.8rem;
+          border-radius: 50%;
+          overflow: hidden;
+          border: 2px solid #fff;
+          background-color: white;
+
+          & + .podcast-jar__avatar-item {
+            margin-left: -1.8rem;
+          }
+
+          .podcast-jar__avatar-item--image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+
+          &:has(.podcast-jar__avatar-item--numbers) {
+            background-color: #{utils.$dark-gunmetal-color};
+            @extend %perfectCentered;
+
+            .podcast-jar__avatar-item--numbers {
+              color: white;
+              font-size: 1.2rem;
+              font-weight: 600;
+              line-height: 2.2rem; /* 183.333% */
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /*RIGHT MEDIA BOX*/
+  .right-media-box {
+    position: relative;
+    .right-media-box__top-box {
+      width: 20rem;
+      position: relative;
+      margin-top: 0.8rem;
+
+      .right-media-box__top-box--data-jar {
+        margin-left: 11.8rem;
+        width: 8.2rem;
+        height: 8.2rem;
+        background-color: #{utils.$royal-orange-color};
+        flex-direction: column;
+        gap: 0.4rem;
+        @extend %isCircle;
+        @extend %perfectCentered;
+
+        > * {
+          display: block;
+        }
+
+        .right-media-box__top-box--data-number {
+          color: #{utils.$white-color};
+          font-size: 1.4rem;
+          font-weight: 800;
+          line-height: 1.4rem; /* 100% */
+        }
+
+        .right-media-box__top-box--data-text {
+          color: #{utils.$linen-color};
+          font-size: 1rem;
+          font-weight: 500;
+          line-height: 1rem; /* 100% */
+        }
+      }
+
+      .right-media-box__top-box--logo-group {
+        margin-top: 1.2rem;
+        gap: 1.8rem;
+        @extend %flexBox;
+
+        .right-media-box__top-box--logo-item {
+          width: 2.8rem;
+          height: 2.8rem;
+        }
+      }
+
+      .right-media-box__top-box--vector {
+        position: absolute;
+        transform: rotate(8.179deg);
+        width: 4.5rem;
+        height: 3.6542rem;
+
+        &.left-vector {
+          top: 3.65rem;
+          left: 5.7rem;
+        }
+
+        &.right-vector {
+          top: 10.2rem;
+          right: -0.67rem;
+        }
+      }
+    }
+
+    .right-media-box__thumb {
+      margin-top: 2.8rem;
+      height: 30.2rem;
+      @extend %thumb;
+      .right-media-box__thumb--image {
+      }
+    }
+
+    .right-media-box__info {
+      @extend %isAbsoluted;
+      @extend %perfectCentered;
+      flex-direction: column;
+      gap: 0.6rem;
+      width: 19.4rem;
+      height: 6rem;
+      border-radius: 0.9rem;
+      background: rgba(255, 255, 255, 0.4);
+      box-shadow: 0px 12px 44px 0px rgba(0, 0, 0, 0.07);
+      backdrop-filter: blur(5px);
+      bottom: 1.6rem;
+      left: 50%;
+      transform: translateX(-50%);
+
+      > * {
+        display: block;
+      }
+
+      .right-media-box__info--name {
+        color: #{utils.$dark-gunmetal-color};
+        font-size: 1.4rem;
+        font-weight: 600;
+        line-height: 1.4rem; /* 100% */
+      }
+
+      .right-media-box__info--title {
+        color: #{utils.$dim-gray-color};
+        font-size: 1.2rem;
+        font-weight: 400;
+        line-height: 1.2rem; /* 100% */
+      }
+    }
+  }
+
+  /*RIGHT HERO*/
+  .hero-info {
+    position: relative;
+
+    .hero-info__heading {
+      top: 1.8rem;
+      @extend %isAbsoluted;
+      background-color: transparent;
+      z-index: 2;
+    }
+
+    .hero-info__desc {
+      padding-top: 27.8rem;
+      @extend %desc-1;
+    }
+
+    .hero-info__action {
+      margin-top: 4rem;
+      @extend %alignmentBox;
+      gap: 2.8rem;
+
+      .hero-info__action--left-cta-btn {
+        @extend %purple-btn;
+
+        .hero-info__action--left-cta-link {
+          @extend %btn-link-1;
+        }
+      }
+
+      .hero-info__action--right-cta-btn {
+        @extend %alignmentBox;
+        gap: 0.8rem;
+
+        .hero-info__action--right-cta-link {
+          @extend %text-link-1;
+        }
+
+        .hero-info__action--right-cta-play-btn {
+          width: 1.8rem;
+          height: 1.8rem;
+        }
+      }
+    }
+
+    .hero-curve-vector {
+      @extend %isAbsoluted;
+      width: auto;
+      height: auto;
+      right: 10.4rem;
+      top: 15.2rem;
+    }
+  }
+}

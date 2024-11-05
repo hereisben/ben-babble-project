@@ -1,0 +1,56 @@
+@media (max-width: 767.98px) {
+  .quotes {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    .row {
+      flex-direction: column-reverse;
+      .quotes-detail {
+        height: fit-content;
+        .quotes-detail__vector {
+          margin-top: 0rem;
+        }
+
+        .quotes-detail__heading {
+          width: 33.9rem;
+          top: 5.3rem;
+        }
+
+        .quotes-detail__desc {
+          padding-top: 10.2rem;
+        }
+
+        .quotes-detail__curve-vector--mobile {
+          position: absolute;
+          top: 7.3rem;
+          width: 9.7rem;
+          left: 12.4rem;
+        }
+
+        .quotes-detail__curve-vector {
+          width: 9.6rem;
+          top: 7.5rem;
+          left: 0rem;
+          right: auto;
+        }
+      }
+
+      .quotes-thumb {
+        height: 26.2rem;
+        margin-top: 2.8rem;
+        .quotes-thumb__box--right {
+          width: 64.3%;
+          > img {
+            object-position: 50% 0%;
+          }
+        }
+
+        .quotes-thumb__box--left {
+          width: 47.19%;
+          > img {
+            object-position: 50% 0%;
+          }
+        }
+      }
+    }
+  }
+}

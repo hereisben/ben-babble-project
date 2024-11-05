@@ -1,0 +1,23 @@
+@media (max-width: 991.98px) {
+  .footer {
+    .mid-footer {
+      margin-left: 0rem;
+      .mid-footer__nav {
+        .mid-footer__nav--head-list {
+          gap: 6.3rem;
+        }
+      }
+    }
+
+    .right-footer {
+      .right-footer__heading {
+        text-align: center;
+      }
+
+      .right-footer__client-group {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  }
+}

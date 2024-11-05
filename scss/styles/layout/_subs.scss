@@ -1,0 +1,84 @@
+@use "../utils/" as utils;
+@use "../components/" as compo;
+@use "../base/" as base;
+
+.subs {
+  .subs-container {
+    position: relative;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    background-color: #{utils.$dark-gunmetal-color};
+    border-radius: 1.2rem;
+    /*TOP SUBS*/
+    .top-subs {
+      .left-top-subs {
+        height: 10.4rem;
+        position: relative;
+        .left-top-subs__heading {
+          @extend %isAbsoluted;
+          top: 0rem;
+          left: 0rem;
+          z-index: 1;
+          color: #{utils.$white-color};
+        }
+
+        .left-top-subs__vector {
+          @extend %isAbsoluted;
+          left: -0.3rem;
+          bottom: -0.5rem;
+        }
+      }
+
+      .subs__desc {
+        @extend %desc-2;
+        color: #{utils.$metalic-silver-color};
+        margin-top: 1rem;
+      }
+    }
+
+    /*BOTTOM SUBS*/
+    .bottom-subs {
+      margin-top: 7rem;
+
+      .subs-getter-box {
+        .subs-getter-box__name {
+          @extend %getter-box;
+        }
+
+        .subs-getter-box__email {
+          @extend %getter-box;
+        }
+
+        .subs-btn {
+          @extend %purple-btn;
+          > * {
+            @extend %btn-link-1;
+          }
+        }
+
+        &:has(input:invalid) .subs-btn {
+          opacity: 0.7;
+        }
+      }
+    }
+
+    .subs-vector {
+      @extend %isAbsoluted;
+
+      &.subs-vector__purple {
+        left: 3.5rem;
+        bottom: 4.5rem;
+      }
+
+      &.subs-vector__green {
+        top: 2.6rem;
+        left: 52.8rem;
+      }
+
+      &.subs-vector__orange {
+        right: 2.7rem;
+        top: 18rem;
+      }
+    }
+  }
+}

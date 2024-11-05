@@ -1,0 +1,45 @@
+@use "sass:math";
+@use "sass:map";
+@use "./grid-variables" as gridVar;
+
+@mixin addMediaQuery($dimension, $isExtraSmallDevice: false) {
+  @if $isExtraSmallDevice {
+    @content;
+  } @else {
+    @media (min-width: $dimension) {
+      @content;
+    }
+  }
+}
+
+@mixin addRowCol($infix) {
+  @for $i from 1 through gridVar.$column-numbers * 0.5 {
+    .row-cols#{$infix}-#{$i} > * {
+      width: math.div(100%, $i);
+    }
+  }
+}
+
+@mixin addCol($infix) {
+  @for $i from 1 through gridVar.$column-numbers {
+    .col#{$infix}-#{$i} {
+      width: math.div($i, gridVar.$column-numbers) * 100%;
+    }
+  }
+}
+
+@mixin addOffset($infix) {
+  @for $i from 0 to gridVar.$column-numbers {
+    .offset#{$infix}-#{$i} {
+      margin-left: math.div($i, gridVar.$column-numbers) * 100%;
+    }
+  }
+}
+
+@mixin addGutter($infix) {
+  @each $gutterPoints, $gutterValue in gridVar.$gutters {
+    .g#{$infix}-#{$gutterPoints} {
+      --gutter-spacing-value: #{$gutterValue};
+    }
+  }
+}

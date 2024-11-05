@@ -1,0 +1,67 @@
+@media (max-width: 767.98px) {
+  .subs {
+    .subs-container {
+      padding-left: 1.8rem;
+      padding-right: 1.8rem;
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+      .top-subs {
+        .left-top-subs {
+          height: 8.4rem;
+          .left-top-subs__heading {
+            width: 33.9rem;
+          }
+
+          .left-top-subs__vector--mobile {
+            position: absolute;
+            left: 23.8rem;
+            top: 1.6rem;
+            width: 8.9rem;
+          }
+        }
+
+        .subs__desc {
+          margin-top: 0rem;
+        }
+      }
+
+      .bottom-subs {
+        margin-top: 3.8rem;
+
+        .subs-getter-box {
+          .row {
+            row-gap: 1.2rem;
+          }
+        }
+
+        .subs-getter-box {
+          .subs-getter-box__name > input,
+          .subs-getter-box__email > input {
+            font-size: 1.6rem;
+            line-height: 2.8rem;
+          }
+        }
+      }
+
+      .subs-vector {
+        &.subs-vector__orange {
+          top: auto;
+          right: auto;
+          bottom: 3.8rem;
+          left: 61.6%;
+        }
+
+        &.subs-vector__green {
+          top: auto;
+          bottom: 1.1rem;
+          left: 84.53%;
+        }
+
+        &.subs-vector__purple {
+          bottom: 6.7rem;
+          left: 81.33%;
+        }
+      }
+    }
+  }
+}

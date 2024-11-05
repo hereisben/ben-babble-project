@@ -1,0 +1,63 @@
+@use "sass:math";
+@use "sass:map";
+
+@forward "./grid-layer";
+
+@use "./grid-variables" as gridVar;
+@use "./grid-mixins" as gridMixins;
+
+%gutter-spacing {
+  padding-left: var(--gutter-x-spacing-value);
+  padding-right: var(--gutter-x-spacing-value);
+}
+
+%full-width-margin {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-fluid,
+.container {
+  // --gutter-x-spacing-value: #{gridVar.$gutter-x-spacing-value};
+  --gutter-x-spacing-value: calc(var(--gutter-spacing-value) * 0.5);
+  @extend %full-width-margin;
+  @extend %gutter-spacing;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--gutter-x-spacing-value));
+  margin-right: calc(-1 * var(--gutter-x-spacing-value));
+
+  &[class*="row-cols-"] > *,
+  [class*="col-"] {
+    flex: 0 0 auto;
+    @extend %gutter-spacing;
+  }
+}
+
+.col {
+  flex: 1 0;
+  @extend %gutter-spacing;
+}
+
+@each $breakpoint, $dimension in gridVar.$grid-breakpoints {
+  $max-width-value: map.get(gridVar.$container-max-widths, $breakpoint);
+  $isExtraSmallDevice: $breakpoint == xs;
+
+  @include gridMixins.addMediaQuery($dimension, $isExtraSmallDevice) {
+    .container {
+      max-width: $max-width-value;
+    }
+    $infix: if($isExtraSmallDevice, "", "-#{$breakpoint}");
+    @include gridMixins.addRowCol($infix);
+
+    @include gridMixins.addCol($infix);
+
+    @include gridMixins.addOffset($infix);
+
+    @include gridMixins.addGutter($infix);
+  }
+}

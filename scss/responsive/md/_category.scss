@@ -1,0 +1,33 @@
+@media (max-width: 991.98px) {
+  .category {
+    margin-top: 11.2rem;
+    padding-bottom: 11.2rem;
+
+    .category-info {
+      .category-info__desc {
+        padding-top: 5.4rem;
+      }
+
+      .category-info__vector {
+        width: 12.3rem;
+        top: 2.2rem;
+        right: 23.3rem;
+      }
+    }
+
+    .bottom-category {
+      margin-top: 3.8rem;
+      row-gap: 1.6rem;
+      grid-template-rows: 17.5rem 17.5rem;
+      .col {
+        &.healthcare-item {
+          grid-column: span 5;
+        }
+      }
+    }
+
+    .category-btn {
+      margin-top: 2.6rem;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@media (max-width: 1199.98px) {
+  .episodes {
+    .top-episodes {
+      .episodes-info {
+        .episodes-info__vector {
+          width: 13rem;
+          top: 3.9rem;
+          right: 5.4rem;
+        }
+      }
+    }
+
+    .bottom-episodes {
+      .episodes-item {
+        .episodes-item__thumb,
+        .episodes-item__detail {
+          height: 23.6rem;
+        }
+
+        .episodes-item__detail {
+          .episodes-item__detail--desc {
+            margin-top: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}

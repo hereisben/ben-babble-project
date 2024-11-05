@@ -1,0 +1,33 @@
+%flexBox {
+  display: flex;
+}
+
+%alignmentBox {
+  display: flex;
+  align-items: center;
+}
+
+%perfectCentered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%twoSideMargin {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+%maxRightCentered {
+  right: 0rem;
+  top: 50%;
+  transform: translate(-50%, 50%);
+}
+
+%isAbsoluted {
+  position: absolute;
+}
+
+%isCircle {
+  border-radius: 50%;
+}

@@ -1,0 +1,78 @@
+@media (max-width: 767.98px) {
+  .episodes {
+    &:has(#episodes-choice__tablet--first-choice:checked)
+      .episodes-switch-box__dot--first-dot,
+    &:has(#episodes-choice__tablet--second-choice:checked)
+      .episodes-switch-box__dot--second-dot,
+    &:has(#episodes-choice__tablet--third-choice:checked)
+      .episodes-switch-box__dot--third-dot {
+      width: 1.2rem;
+      height: 1.2rem;
+      background-color: #936cdd;
+    }
+
+    .top-episodes {
+      .episodes-info {
+        .episodes-info__vector--mobile {
+          position: absolute;
+          right: auto;
+          left: 0.4rem;
+          top: 5.4rem;
+          width: 10.8rem;
+        }
+      }
+
+      .episodes-pc-btn {
+        display: none;
+      }
+    }
+
+    .bottom-episodes {
+      padding-top: 11rem;
+
+      .episodes-choice__tablet {
+        position: absolute;
+        visibility: hidden;
+        &:checked + .col {
+          display: block;
+        }
+      }
+
+      > .col {
+        display: none;
+      }
+
+      .episodes-item {
+        gap: 1.9rem;
+        flex-direction: row;
+        height: 17rem;
+
+        &.reversed-item {
+          flex-direction: initial;
+        }
+
+        .episodes-item__thumb {
+          height: 100%;
+          width: 47.19%;
+        }
+        .episodes-item__detail {
+          height: 100%;
+          width: auto;
+          .episodes-item__detail--time {
+            line-height: 1rem;
+          }
+          .episodes-item__detail--title {
+            margin-top: 0.7rem;
+          }
+          .episodes-item__detail--desc {
+            margin-top: 1.2rem;
+          }
+          .episodes-item__detail--link {
+            margin-top: 0.7rem;
+            gap: 0.4rem;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,242 @@
+@media (max-width: 575.98px) {
+  %basic-desc {
+    font-size: 1.4rem;
+    line-height: 2.4rem; /* 171.429% */
+  }
+  /*HEADER*/
+  .header {
+    padding-top: 2rem;
+    top: -1rem;
+  }
+
+  /*HERO*/
+  .hero {
+    padding-top: 3.2rem;
+    .left-media-box {
+      height: 25.9223rem;
+
+      .left-media-box__media-tool-bar {
+        height: 13.73%;
+      }
+
+      .podcast-jar {
+        .podcast-jar__label {
+          font-size: 0.8306rem;
+          line-height: 1.4239rem; /* 171.429% */
+        }
+
+        .podcast-jar__avatar-group {
+          margin-top: 0.52rem;
+        }
+      }
+    }
+
+    .right-media-box {
+      .right-media-box__top-box {
+        .right-media-box__top-box--data-jar {
+          width: 4.865rem;
+          height: 4.865rem;
+
+          .right-media-box__top-box--data-number {
+            font-size: 0.8306rem;
+            line-height: 0.8306rem; /* 100% */
+          }
+
+          .right-media-box__top-box--data-text {
+            font-size: 0.5933rem;
+            line-height: 0.5933rem; /* 100% */
+          }
+        }
+
+        .right-media-box__top-box--logo-group {
+          margin-top: 0.71rem;
+          .right-media-box__top-box--logo-item {
+            width: 1.6612rem;
+            height: 1.6612rem;
+          }
+        }
+
+        .right-media-box__top-box--vector {
+          &.left-vector {
+            top: 2.17rem;
+          }
+
+          &.right-vector {
+            left: 9.31rem;
+            right: auto;
+            top: 5.575rem;
+          }
+        }
+      }
+
+      .right-media-box__thumb {
+        margin-top: 1.66rem;
+      }
+
+      .right-media-box__info {
+        width: 71.85%;
+        border-radius: 0.534rem;
+        bottom: 0.95rem;
+
+        .right-media-box__info--name {
+          font-size: 0.8306rem;
+          line-height: 0.8306rem; /* 100% */
+        }
+
+        .right-media-box__info--title {
+          font-size: 0.7119rem;
+          line-height: 0.7119rem; /* 100% */
+        }
+      }
+    }
+
+    .hero-info {
+      .hero-info__desc {
+        @extend %basic-desc;
+      }
+    }
+  }
+
+  /*RANK*/
+  .rank {
+    .clients-group {
+      .clients-group__background {
+        width: 17.6rem;
+        height: 17.6rem;
+        left: 8.2rem;
+        right: auto;
+        top: 3.1rem;
+      }
+    }
+
+    .rank-info {
+      .rank-info__heading {
+        top: 3.8rem;
+      }
+
+      .rank-info__desc {
+        padding-top: 12.2rem;
+      }
+
+      .rank-info__btn {
+        margin-top: 2.8rem;
+      }
+    }
+  }
+
+  /*CATEGORY*/
+  .category {
+    padding-bottom: 11.7rem;
+    .category-info {
+      .category-info__heading {
+        width: 100%;
+        text-align: center;
+      }
+
+      .category-info__vector--mobile {
+        left: 18.4rem;
+        top: 2rem;
+      }
+    }
+
+    .category-btn {
+      margin-top: 3.8rem;
+    }
+  }
+
+  /*EPISODES*/
+  .episodes {
+    .top-episodes {
+      .episodes-info {
+        .episodes-info__heading {
+          width: 33.9rem;
+        }
+      }
+    }
+
+    .bottom-episodes {
+      .episodes-item {
+        .episodes-item__thumb {
+        }
+
+        .episodes-item__detail {
+          width: 47.19%;
+
+          h3 {
+            font-size: 1.2rem;
+            line-height: 1.8rem;
+          }
+
+          .episodes-item__detail--desc {
+            width: 95%;
+            font-size: 1rem;
+            line-height: 1.8rem; /* 180% */
+          }
+
+          .episodes-item__detail--link {
+            .episodes-item__detail--btn-link {
+              width: 1rem;
+              height: 1rem;
+            }
+          }
+        }
+      }
+    }
+
+    .episodes-switch {
+      margin-top: 1.8rem;
+    }
+  }
+
+  /*QUOTES*/
+  .quotes {
+    .row {
+      .quotes-thumb {
+        .quotes-thumb__box--right {
+          > img {
+            object-fit: contain;
+          }
+        }
+
+        .quotes-thumb__box--left {
+          > img {
+            object-fit: contain;
+          }
+        }
+
+        .quotes-switch {
+          width: 2.7rem;
+          left: 4.7rem;
+          gap: 0.5rem;
+
+          > label {
+            width: 0.5rem;
+            height: 0.5rem;
+          }
+        }
+      }
+    }
+
+    &:has(#quotes-detail__choice--first-choice:checked)
+      .quotes-switch__dot--first-dot,
+    &:has(#quotes-detail__choice--second-choice:checked)
+      .quotes-switch__dot--second-dot,
+    &:has(#quotes-detail__choice--third-choice:checked)
+      .quotes-switch__dot--third-dot {
+      width: 0.7rem;
+      height: 0.7rem;
+    }
+  }
+
+  /*FOOTER*/
+  .footer {
+    .mid-footer {
+      .mid-footer__nav {
+        .mid-footer__nav--head-list {
+          flex-direction: column;
+          gap: 3.8rem;
+        }
+      }
+    }
+  }
+}

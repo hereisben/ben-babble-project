@@ -1,0 +1,23 @@
+@media (max-width: 1199.98px) {
+  .rank {
+    .rank-info {
+      .rank-info__vector {
+        width: 20.9rem;
+        top: 12.3rem;
+        right: 0.3rem;
+      }
+    }
+
+    .clients-group {
+      .clients-group__item {
+        &.podcast-client {
+          right: 17rem;
+        }
+
+        &.spotify-client {
+          right: 22.8rem;
+        }
+      }
+    }
+  }
+}

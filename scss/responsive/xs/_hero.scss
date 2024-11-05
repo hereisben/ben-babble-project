@@ -1,0 +1,75 @@
+@media (max-width: 767.98px) {
+  .hero {
+    padding-bottom: 3.21rem;
+    .left-media-box {
+      .left-media-box__thumb {
+        height: 17.9173rem;
+      }
+
+      .left-media-box__media-tool-bar {
+        width: 11.5098rem;
+        height: 3.5597rem;
+        border-radius: 0.534rem;
+        top: 16.14rem;
+      }
+    }
+
+    .right-media-box {
+      .right-media-box__info {
+        width: 11.5098rem;
+        border-radius: 0.534rem;
+        bottom: 0.95rem;
+      }
+
+      .right-media-box__thumb {
+        height: 17.9173rem;
+      }
+
+      .right-media-box__top-box {
+        margin-top: 0.47rem;
+        .right-media-box__top-box--data-jar {
+          width: 6.7rem;
+          height: 6.7rem;
+          margin-left: 7rem;
+          .right-media-box__top-box--data-number {
+            font-size: 1.2rem;
+          }
+          .right-media-box__top-box--data-text {
+            font-size: 0.8rem;
+            line-height: 1rem;
+          }
+        }
+
+        .right-media-box__top-box--vector {
+          &.left-vector {
+            left: 3.21rem;
+            top: 3.17rem;
+
+            &.right-vector {
+              top: 9.1rem;
+              right: 6.43rem;
+            }
+          }
+        }
+      }
+    }
+
+    .hero-info {
+      .hero-info__heading {
+        width: 33.9rem;
+        top: 3.9rem;
+      }
+
+      .hero-info__desc {
+        padding-top: 14.3rem;
+      }
+
+      .hero-curve-vector {
+        right: auto;
+        left: 0.3rem;
+        top: 11.2rem;
+        width: 16.9rem;
+      }
+    }
+  }
+}

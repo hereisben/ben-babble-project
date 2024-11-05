@@ -1,0 +1,58 @@
+@media (max-width: 991.98px) {
+  .rank {
+    padding-top: 9.6rem;
+    .rank-info {
+      .rank-info__desc {
+        padding-top: 13.5rem;
+      }
+
+      .rank-info__vector {
+        width: 14.6rem;
+        top: 9.8rem;
+        right: 3.2rem;
+      }
+
+      .rank-info__btn {
+        margin-top: 2.6rem;
+      }
+    }
+
+    .clients-group {
+      .clients-group__item {
+        &.podcast-client {
+          width: 11.84rem;
+          height: 11.84rem;
+          right: 14.5rem;
+          top: 1.1rem;
+        }
+
+        &.red-client {
+          width: 6.4rem;
+          height: 6.4rem;
+        }
+
+        &.cloud-client {
+          width: 8rem;
+          height: 8rem;
+        }
+
+        &.unknown-client {
+          width: 11.04rem;
+          height: 11.04rem;
+          bottom: 10rem;
+        }
+
+        &.spotify-client {
+          width: 10.8rem;
+          height: 10.8rem;
+          right: 18.3rem;
+          bottom: 3rem;
+        }
+      }
+
+      .clients-group__background {
+        right: 0.8rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+$column-numbers: 12;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1230px,
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px,
+);
+
+$gutter-spacing-value: 3rem !default;
+$gutter-x-spacing-value: $gutter-spacing-value * 0.5;
+
+$gutters: (
+  0: $gutter-spacing-value * 0,
+  1: $gutter-spacing-value * 0.25,
+  2: $gutter-spacing-value * 0.5,
+  3: $gutter-spacing-value,
+  4: $gutter-spacing-value * 1.5,
+  5: $gutter-spacing-value * 3,
+);

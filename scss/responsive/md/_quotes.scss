@@ -1,0 +1,42 @@
+@media (max-width: 991.98px) {
+  .quotes {
+    padding-top: 11.76rem;
+    padding-bottom: 11.2rem;
+    .quotes-thumb {
+      height: 30rem;
+
+      .quotes-switch {
+        left: 3.2rem;
+      }
+    }
+
+    .quotes-detail {
+      height: 30rem;
+      .quotes-detail__quotes {
+        .quotes-detail__desc {
+          padding-top: 10.8rem;
+        }
+
+        .quotes-detail__name {
+          margin-top: 1.2rem;
+          font-size: 1.4rem;
+          line-height: 2.4rem; /* 171.429% */
+        }
+      }
+
+      .quotes-detail__vector {
+        margin-top: 2rem;
+      }
+
+      .quotes-detail__curve-vector {
+        width: 11.7rem;
+        top: 9.5rem;
+        right: 11.3rem;
+      }
+
+      .quotes-detail__heading {
+        top: 7.3rem;
+      }
+    }
+  }
+}

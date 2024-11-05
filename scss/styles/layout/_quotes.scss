@@ -1,0 +1,128 @@
+@use "../utils/" as utils;
+@use "../components/" as compo;
+@use "../base/" as base;
+
+.quotes {
+  background-color: #{utils.$white-color};
+  padding-top: 16.8rem;
+  padding-bottom: 16rem;
+  position: relative;
+  /*QUOTES THUMB*/
+  .quotes-thumb {
+    position: relative;
+    height: 44.4rem;
+
+    .quotes-thumb__box {
+      @extend %isAbsoluted;
+      @extend %thumb;
+
+      &.quotes-thumb__box--right {
+        width: 64.91%;
+        height: 100%;
+      }
+
+      &.quotes-thumb__box--left {
+        width: 47.36%;
+        height: 63.96%;
+      }
+
+      &:first-of-type {
+        left: 0rem;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+      }
+
+      &:nth-of-type(2) {
+        right: 0rem;
+      }
+    }
+
+    .quotes-switch {
+      @extend %isAbsoluted;
+      @extend %switch-box;
+      left: 7.4rem;
+      bottom: 0rem;
+    }
+  }
+
+  /*QUOTES DETAIL*/
+  .quotes-detail {
+    height: 44.4rem;
+    position: relative;
+
+    .quotes-detail__vector {
+      margin-top: 4.8rem;
+      width: 4.3rem;
+      height: 3.5rem;
+    }
+
+    .quotes-detail__heading {
+      @extend %isAbsoluted;
+      top: 10.1rem;
+      z-index: 1;
+    }
+
+    .quotes-detail__curve-vector {
+      @extend %isAbsoluted;
+      top: 13.2rem;
+      right: 9.8rem;
+    }
+
+    .quotes-detail__quotes {
+      display: none;
+      .quotes-detail__desc {
+        padding-top: 16rem;
+        @extend %desc-2;
+      }
+      .quotes-detail__name {
+        display: block;
+        margin-top: 1.8rem;
+        @extend %desc-3;
+        color: #{utils.$metalic-silver-color};
+      }
+    }
+
+    .quotes-detail__choice {
+      @extend %isAbsoluted;
+      visibility: hidden;
+
+      &:checked + .quotes-detail__quotes {
+        display: block;
+      }
+    }
+  }
+
+  &:has(#quotes-detail__choice--first-choice:checked)
+    .quotes-switch__dot--first-dot,
+  &:has(#quotes-detail__choice--second-choice:checked)
+    .quotes-switch__dot--second-dot,
+  &:has(#quotes-detail__choice--third-choice:checked)
+    .quotes-switch__dot--third-dot {
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: #{utils.$medium-purple-color};
+  }
+
+  .quotes__background--pc {
+    @extend %isAbsoluted;
+    top: 10rem;
+    right: -16.2rem;
+    background-color: #{utils.$royal-orange-color};
+    opacity: 0.4;
+    filter: blur(129px);
+    width: 28.7rem;
+    height: 28.7rem;
+  }
+
+  .quotes__background--mobile {
+    @extend %isAbsoluted;
+    background-color: #{utils.$royal-orange-color};
+    top: 13.1rem;
+    right: 0rem;
+    width: 12.7rem;
+    height: 12.7rem;
+    filter: blur(129px);
+    opacity: 0.4;
+  }
+}

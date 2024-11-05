@@ -1,0 +1,40 @@
+.grid-layer {
+  position: fixed;
+  // width: 100%;
+
+  @media (min-width: 576px) {
+    width: 576px;
+  }
+
+  @media (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media (min-width: 992px) {
+    width: 992px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 1200px;
+  }
+  z-index: 99;
+
+  display: none;
+  .col {
+    background-clip: content-box;
+    background-color: #ff9051;
+    opacity: 0.2;
+    height: 800rem;
+  }
+}
+
+.grid-layer-switch {
+  position: fixed;
+  top: 0rem;
+  left: 0rem;
+  z-index: 999;
+
+  &:checked + .grid-layer {
+    display: initial;
+  }
+}

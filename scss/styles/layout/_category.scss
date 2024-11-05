@@ -1,0 +1,114 @@
+@use "../utils/" as utils;
+@use "../components/" as compo;
+@use "../base/" as base;
+
+.category {
+  margin-top: 16rem;
+  padding-bottom: 16rem;
+  /*TOP CATEGORY*/
+  .category-info {
+    position: relative;
+    .category-info__heading {
+      @extend %isAbsoluted;
+      z-index: 1;
+      top: 0rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .category-info__desc {
+      padding-top: 7rem;
+      text-align: center;
+      @extend %desc-2;
+      @extend %twoSideMargin;
+      width: 47rem;
+    }
+
+    .category-info__vector {
+      @extend %isAbsoluted;
+      top: 3.3rem;
+      right: 39.1rem;
+    }
+  }
+
+  /*BOTTOM CATEGORY*/
+  .bottom-category {
+    margin-top: 7rem;
+    display: grid;
+
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 28.5rem 28.5rem;
+    row-gap: 3rem;
+    grid-template-areas:
+      ". . ."
+      ". . .";
+
+    .col {
+      .category-item {
+        position: relative;
+        height: 100%;
+        @extend %thumb;
+
+        > .category-item__label {
+          @extend %isAbsoluted;
+          @extend %flexBox;
+          flex-direction: column;
+          padding-top: 1.6rem;
+          padding-left: 2.4rem;
+          bottom: 0rem;
+          width: 100%;
+          height: 8.6rem;
+          background-color: rgba(255, 255, 255, 0.2);
+          backdrop-filter: blur(10px);
+
+          .category-item__top-label {
+            @extend %alignmentBox;
+            gap: 0.8rem;
+
+            .category-item__top-label--title {
+              @extend %text-link-1;
+              @extend %white-color;
+            }
+          }
+
+          .category-item__bottom-label {
+            @extend %desc-3;
+            @extend %white-color;
+          }
+        }
+      }
+
+      &.education-item {
+        grid-column: span 4;
+        grid-row: span 2;
+      }
+
+      &.healthcare-item {
+        grid-column: span 5;
+      }
+
+      &.music-item {
+        grid-column: span 3;
+      }
+
+      &.fashion-item {
+        grid-column: span 3;
+      }
+
+      &.comedy-item {
+        grid-column: span 5;
+      }
+    }
+  }
+
+  /*CATEGORY BUTTON*/
+  .category-btn {
+    margin-top: 5.5rem;
+    @extend %black-btn;
+    @extend %twoSideMargin;
+
+    .category-btn__link {
+      @extend %btn-link-1;
+    }
+  }
+}

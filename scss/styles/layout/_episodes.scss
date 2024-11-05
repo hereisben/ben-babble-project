@@ -1,0 +1,131 @@
+@use "../utils/" as utils;
+@use "../components/" as compo;
+@use "../base/" as base;
+
+.episodes {
+  position: relative;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  background-color: #{utils.$floral-white-color};
+
+  .episodes-choice__pc {
+    display: none;
+  }
+
+  .top-episodes {
+    .episodes-info {
+      position: relative;
+      background-color: green;
+
+      > * {
+        @extend %isAbsoluted;
+      }
+
+      .episodes-info__heading {
+        top: 0rem;
+        left: 0rem;
+        z-index: 1;
+      }
+
+      .episodes-info__vector {
+        top: 3.9rem;
+        right: 2.1rem;
+      }
+    }
+
+    .episodes-pc-btn {
+      @extend %black-btn;
+      margin-top: 2rem;
+      margin-left: auto;
+    }
+  }
+
+  .bottom-episodes {
+    padding-top: 18.8rem;
+
+    &.pc-episodes {
+      display: none;
+    }
+
+    .episodes-item {
+      @extend %flexBox;
+      flex-direction: column;
+      gap: 3rem;
+
+      &.reversed-item {
+        flex-direction: column-reverse;
+      }
+
+      .episodes-item__thumb {
+        @extend %thumb;
+        height: 28.6rem;
+      }
+
+      .episodes-item__detail {
+        height: 28.6rem;
+        @extend %flexBox;
+        flex-direction: column;
+        justify-content: center;
+
+        > * {
+          display: block;
+        }
+        .episodes-item__detail--time {
+          color: #{utils.$orange-red-color};
+          @extend %desc-3;
+        }
+
+        .episodes-item__detail--title {
+          margin-top: 0.6rem;
+        }
+
+        .episodes-item__detail--desc {
+          margin-top: 1.8rem;
+          @extend %desc-2;
+        }
+
+        .episodes-item__detail--link {
+          margin-top: 1.1rem;
+          @extend %alignmentBox;
+          gap: 0.6rem;
+
+          .episodes-item__detail--text-link {
+            @extend %text-link-3;
+          }
+
+          .episodes-item__detail--btn-link {
+            color: #{utils.$dark-gunmetal-color};
+            width: 1.4rem;
+            height: 1.4rem;
+          }
+
+          &:hover > * {
+            color: #{utils.$medium-purple-color};
+          }
+        }
+      }
+    }
+  }
+
+  .episodes-switch {
+    margin-top: 6.5rem;
+    .episodes-switch-box {
+      @extend %switch-box;
+      @extend %twoSideMargin;
+
+      .episodes-switch-box__dot {
+      }
+    }
+
+    &.episodes-switch__pc {
+      display: none;
+    }
+  }
+
+  .episodes-tablet-btn {
+    @extend %black-btn;
+    margin-top: 3.8rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

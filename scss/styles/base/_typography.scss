@@ -1,0 +1,174 @@
+@use "../utils/" as utils;
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font: {
+    size: 1.6rem;
+    family: "Plus Jakarta Sans", "san-serif";
+  }
+}
+
+%heading-font-weight {
+  font-weight: 700;
+}
+
+%link-font-weight {
+  font-weight: 600;
+}
+
+%dark-gunmetal-color {
+  color: #{utils.$dark-gunmetal-color};
+}
+
+%dim-gray-color {
+  color: #{utils.$dim-gray-color};
+}
+
+%white-color {
+  color: #{utils.$white-color};
+}
+
+%lg-font-size {
+  font-size: 1.8rem;
+  line-height: 3rem;
+}
+
+%md-font-size {
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+}
+
+%sm-font-size {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+}
+
+h1,
+h2,
+h3 {
+  @extend %heading-font-weight;
+  @extend %dark-gunmetal-color;
+}
+
+h1 {
+  font-size: 7rem;
+  line-height: 8rem;
+}
+
+h2 {
+  font-size: 4.2rem;
+  line-height: 5.2rem;
+}
+
+h3 {
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
+%text-link {
+  @extend %link-font-weight;
+  @extend %dark-gunmetal-color;
+}
+
+%text-link-1 {
+  @extend %text-link;
+  @extend %lg-font-size;
+}
+
+%text-link-2 {
+  @extend %text-link;
+  @extend %md-font-size;
+}
+
+%text-link-3 {
+  @extend %text-link;
+  @extend %sm-font-size;
+}
+
+%btn-link {
+  @extend %link-font-weight;
+}
+
+%btn-link-1 {
+  @extend %btn-link;
+  @extend %lg-font-size;
+}
+
+%btn-link-2 {
+  @extend %btn-link;
+  @extend %md-font-size;
+}
+
+%btn-link-3 {
+  @extend %btn-link;
+  @extend %sm-font-size;
+}
+
+%desc {
+  font-weight: 400;
+  @extend %dim-gray-color;
+}
+
+%desc-1 {
+  @extend %desc;
+  @extend %lg-font-size;
+}
+
+%desc-2 {
+  @extend %desc;
+  @extend %md-font-size;
+}
+
+%desc-3 {
+  @extend %desc;
+  @extend %sm-font-size;
+}
+
+@media (max-width: 1199.98px) {
+  h1 {
+    font-size: 6rem;
+  }
+
+  h2 {
+    font-size: 3.8rem;
+  }
+
+  h3 {
+    font-size: 1.7rem;
+  }
+
+  %md-font-size {
+    font-size: 1.3rem;
+    line-height: 2.6rem;
+  }
+
+  %sm-font-size {
+    font-size: 1.1rem;
+    line-height: 2.3rem;
+  }
+}
+
+@media (max-width: 991.98px) {
+  h1 {
+    font-size: 3.6rem;
+    line-height: 4.6rem;
+  }
+
+  h2 {
+    font-size: 2.6rem;
+    line-height: 3.6rem;
+  }
+
+  %md-font-size {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+  }
+
+  %sm-font-size {
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
+}
