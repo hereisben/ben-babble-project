@@ -1,0 +1,37 @@
+@media (max-width: 1199.98px) {
+  .header {
+    .header-nav {
+      .header-nav__list {
+        .header-nav__item {
+          &.header-nav__item--episodes {
+            &:has(.header-nav__subitem--checkbox:checked) {
+              width: 7.2rem;
+            }
+          }
+
+          &.header-nav__item--trending {
+            &:has(.header-nav__subitem--checkbox:checked) {
+              width: 6.9rem;
+            }
+          }
+
+          &.header-nav__item--category {
+            &:has(.header-nav__subitem--checkbox:checked) {
+              width: 7.4rem;
+            }
+          }
+
+          &.header-nav__item--blog {
+            &:has(.header-nav__subitem--checkbox:checked) {
+              width: 4.2rem;
+            }
+          }
+
+          label {
+            top: 0.7rem;
+          }
+        }
+      }
+    }
+  }
+}

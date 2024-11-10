@@ -252,6 +252,17 @@
         .hero-info__action--right-cta-play-btn {
           width: 1.8rem;
           height: 1.8rem;
+
+          .hero-info__action--right-cta-play-vector {
+            color: #{utils.$dark-gunmetal-color};
+            width: 1.8rem;
+            height: 1.8rem;
+          }
+        }
+
+        &:hover .hero-info__action--right-cta-link,
+        &:hover .hero-info__action--right-cta-play-vector {
+          color: #{utils.$medium-purple-color};
         }
       }
     }

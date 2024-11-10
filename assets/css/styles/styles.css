@@ -146,6 +146,7 @@ h3 {
   width: 15.7rem;
   height: 6.4rem;
   border-radius: 0.6rem;
+  transition: 0.25s;
 }
 .subs .subs-container .bottom-subs .subs-getter-box .subs-btn > *, .rank .rank-info .rank-info__btn > *, .hero .hero-info .hero-info__action .hero-info__action--left-cta-btn > *, .episodes .top-episodes .episodes-pc-btn > *, .episodes .episodes-tablet-btn > *, .category .category-btn > *, .header .auth-bar .auth-bar__signup-jar > * {
   color: #fff;
@@ -154,6 +155,9 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.subs .subs-container .bottom-subs .subs-getter-box .subs-btn:hover, .rank .rank-info .rank-info__btn:hover, .hero .hero-info .hero-info__action .hero-info__action--left-cta-btn:hover, .episodes .top-episodes .episodes-pc-btn:hover, .episodes .episodes-tablet-btn:hover, .category .category-btn:hover, .header .auth-bar .auth-bar__signup-jar:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 .episodes .top-episodes .episodes-pc-btn, .episodes .episodes-tablet-btn, .category .category-btn, .header .auth-bar .auth-bar__signup-jar {
@@ -477,6 +481,14 @@ h3 {
 .hero .hero-info .hero-info__action .hero-info__action--right-cta-btn .hero-info__action--right-cta-play-btn {
   width: 1.8rem;
   height: 1.8rem;
+}
+.hero .hero-info .hero-info__action .hero-info__action--right-cta-btn .hero-info__action--right-cta-play-btn .hero-info__action--right-cta-play-vector {
+  color: #201830;
+  width: 1.8rem;
+  height: 1.8rem;
+}
+.hero .hero-info .hero-info__action .hero-info__action--right-cta-btn:hover .hero-info__action--right-cta-link, .hero .hero-info .hero-info__action .hero-info__action--right-cta-btn:hover .hero-info__action--right-cta-play-vector {
+  color: #936cdd;
 }
 .hero .hero-info .hero-curve-vector {
   width: auto;
@@ -908,6 +920,7 @@ body {
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 7rem;
+  overflow-x: hidden;
 }
 
 /*# sourceMappingURL=styles.css.map */

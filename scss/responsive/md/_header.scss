@@ -3,9 +3,13 @@
     .header-nav {
       margin-left: 2.2rem;
       .header-nav__list {
-        gap: 3.8rem;
+        gap: 2.8rem;
 
         .header-nav__item {
+          label {
+            right: 0rem;
+          }
+
           &.header-nav__item--episodes:hover,
           &.header-nav__item--episodes:has(
               .header-nav__subitem--checkbox:checked

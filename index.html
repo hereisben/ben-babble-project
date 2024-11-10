@@ -90,6 +90,16 @@
       content="./assets/favicon/ms-icon-144x144.png"
     />
     <meta name="theme-color" content="#ffffff" />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- FONT AWESONE -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Podcast Landing Page</title>
   </head>
   <body>
@@ -268,6 +278,63 @@
                 for="mobile-nav__layer--check"
                 class="mobile-nav__layer"
               ></label>
+              <nav class="mobile-nav__rail-nav">
+                <a href="#!" class="mobile-nav__rail-nav--user-link">
+                  <div class="mobile-nav__rail-nav--user-avatar-box">
+                    <img
+                      src="./assets/img/blank-profile-picture-973460_1280.webp"
+                      alt="Not Signed In"
+                      class="mobile-nav__rail-nav--user-avatar-image"
+                    />
+                  </div>
+                  <span class="mobile-nav__rail-nav--user-name"
+                    >Not Signed In</span
+                  >
+                </a>
+
+                <!-- MOBILE MENU -->
+                <ul class="mobile-nav__menu">
+                  <li class="mobile-nav__item">
+                    <a href="#" class="mobile-nav__item--link">
+                      <i class="fa-solid fa-house"></i>
+                      <span class="mobile-nav__item--text">HOME</span>
+                    </a>
+                  </li>
+                  <li class="mobile-nav__item">
+                    <a href="#episodes" class="mobile-nav__item--link">
+                      <i class="fa-solid fa-podcast"></i>
+                      <span class="mobile-nav__item--text">EPISODES</span>
+                    </a>
+                  </li>
+                  <li class="mobile-nav__item">
+                    <a href="#trending" class="mobile-nav__item--link">
+                      <i class="fa-solid fa-arrow-trend-up"></i>
+                      <span class="mobile-nav__item--text">TRENDING</span>
+                    </a>
+                  </li>
+                  <li class="mobile-nav__item">
+                    <a href="#category" class="mobile-nav__item--link">
+                      <i class="fa-solid fa-list"></i>
+                      <span class="mobile-nav__item--text">CATEGORY</span>
+                    </a>
+                  </li>
+                  <li class="mobile-nav__item">
+                    <a href="#!" class="mobile-nav__item--link">
+                      <i class="fa-solid fa-blog"></i>
+                      <span class="mobile-nav__item--text">BLOG</span>
+                    </a>
+                  </li>
+                </ul>
+
+                <div class="mobile-nav__auth">
+                  <div class="mobile-nav__auth--btn">
+                    <a href="#!" class="mobile-nav__auth--link">SIGN IN</a>
+                  </div>
+                  <div class="mobile-nav__auth--btn">
+                    <a href="#!" class="mobile-nav__auth--link">SIGN UP</a>
+                  </div>
+                </div>
+              </nav>
             </div>
           </div>
         </div>
@@ -280,7 +347,7 @@
         <div class="container g-lg-3 g-2">
           <div class="row">
             <!-- LEFT MEDIA BOX -->
-            <div class="col col-md-3 col-6">
+            <div class="col col-md-3 col-6" data-aos="fade-right">
               <figure class="left-media-box">
                 <div class="left-media-box__thumb">
                   <img
@@ -441,7 +508,7 @@
               </figure>
             </div>
             <!-- RIGHT MEDIA BOX -->
-            <div class="col col-md-3 col-6">
+            <div class="col col-md-3 col-6" data-aos="fade-left">
               <figure class="right-media-box">
                 <div class="right-media-box__top-box">
                   <div class="right-media-box__top-box--data-jar">
@@ -518,7 +585,10 @@
               </figure>
             </div>
             <!-- RIGHT HERO -->
-            <div class="col col-lg-5 offset-lg-1 col-md-6 col-12 offset-0">
+            <div
+              class="col col-lg-5 offset-lg-1 col-md-6 col-12 offset-0"
+              data-aos="flip-left"
+            >
               <article class="hero-info">
                 <h1 class="hero-info__heading">
                   A new era of podcasting for you
@@ -538,11 +608,25 @@
                       >Listen now</a
                     >
                     <a href="#!" class="hero-info__action--right-cta-play-btn">
-                      <img
+                      <!-- <img
                         src="./assets/img/hero-play-btn.svg"
                         alt="Black play button"
                         class="hero-info__action--right-cta-play-vector"
-                      />
+                      /> -->
+                      <svg
+                        class="hero-info__action--right-cta-play-vector"
+                        width="18"
+                        height="19"
+                        viewBox="0 0 18 19"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle cx="9" cy="9.91235" r="9" fill="currentColor" />
+                        <path
+                          d="M12.85 9.82575C12.9167 9.86424 12.9167 9.96047 12.85 9.99896L7.15 13.2899C7.08333 13.3283 7 13.2802 7 13.2033L7 6.62146C7 6.54448 7.08333 6.49636 7.15 6.53485L12.85 9.82575Z"
+                          fill="white"
+                        />
+                      </svg>
                     </a>
                   </div>
                 </div>
@@ -562,7 +646,7 @@
         <div class="container g-lg-3 g-2">
           <div class="row">
             <!-- LEFT RANK -->
-            <div class="col col-md-5 col-12">
+            <div class="col col-md-5 col-12" data-aos="fade-right">
               <article class="rank-info">
                 <h2 class="rank-info__heading">
                   We are in the top padcast directories
@@ -590,7 +674,10 @@
               </article>
             </div>
             <!-- RIGHT RANK -->
-            <div class="col col-md-6 offset-md-1 col-sm-10 offset-sm-1">
+            <div
+              class="col col-md-6 offset-md-1 col-sm-10 offset-sm-1"
+              data-aos="fade-left"
+            >
               <div class="clients-group">
                 <img
                   src="./assets/img/red-client-logo.svg"
@@ -629,7 +716,7 @@
         <div class="container g-lg-3 g-2">
           <!-- TOP CATEGORY -->
           <div class="row">
-            <div class="col col-12">
+            <div class="col col-12" data-aos="zoom-in">
               <article class="category-info">
                 <h2 class="category-info__heading">Listen by category</h2>
                 <p class="category-info__desc">
@@ -652,7 +739,7 @@
           <!-- BOTTOM CATEGORY -->
           <div class="row bottom-category">
             <!-- EDUCATION -->
-            <div class="col education-item">
+            <div class="col education-item" data-aos="flip-down">
               <div class="category-item">
                 <img
                   src="./assets/img/education-category.svg"
@@ -677,7 +764,7 @@
               </div>
             </div>
             <!-- HEALTHCARE -->
-            <div class="col healthcare-item">
+            <div class="col healthcare-item" data-aos="flip-down">
               <div class="category-item">
                 <img
                   src="./assets/img/healthcare-category.svg"
@@ -702,7 +789,7 @@
               </div>
             </div>
             <!-- MUSIC -->
-            <div class="col music-item">
+            <div class="col music-item" data-aos="flip-down">
               <div class="category-item">
                 <img
                   src="./assets/img/music-category.svg"
@@ -725,7 +812,7 @@
               </div>
             </div>
             <!-- FASHION -->
-            <div class="col fashion-item">
+            <div class="col fashion-item" data-aos="flip-down">
               <div class="category-item">
                 <img
                   src="./assets/img/fashion-category.svg"
@@ -748,7 +835,7 @@
               </div>
             </div>
             <!-- COMEDY -->
-            <div class="col comedy-item">
+            <div class="col comedy-item" data-aos="flip-down">
               <div class="category-item">
                 <img
                   src="./assets/img/comedy-category.svg"
@@ -787,7 +874,10 @@
         <div class="container g-lg-3 g-2">
           <!-- TOP EPISODES -->
           <div class="row top-episodes">
-            <div class="col col-xl-4 col-md-5 col-sm-6 col-12">
+            <div
+              class="col col-xl-4 col-md-5 col-sm-6 col-12"
+              data-aos="zoom-in"
+            >
               <article class="episodes-info">
                 <h2 class="episodes-info__heading">
                   Our most popular episodes
@@ -829,7 +919,7 @@
               id="episodes-choice__tablet--first-choice"
               class="episodes-choice__tablet mobile-only"
             />
-            <div class="col">
+            <div class="col" data-aos="flip-left">
               <article class="episodes-item">
                 <div class="episodes-item__thumb">
                   <img
@@ -879,7 +969,7 @@
               id="episodes-choice__tablet--second-choice"
               class="episodes-choice__tablet mobile-only"
             />
-            <div class="col">
+            <div class="col" data-aos="flip-right">
               <article class="episodes-item reversed-item">
                 <div class="episodes-item__thumb">
                   <img
@@ -928,7 +1018,7 @@
               id="episodes-choice__tablet--third-choice"
               class="episodes-choice__tablet mobile-only"
             />
-            <div class="col">
+            <div class="col" data-aos="flip-left">
               <article class="episodes-item">
                 <div class="episodes-item__thumb">
                   <img
@@ -971,7 +1061,7 @@
               </article>
             </div>
             <!-- PODCAST 4 -->
-            <div class="col mobile-hidden">
+            <div class="col mobile-hidden" data-aos="flip-right">
               <article class="episodes-item reversed-item">
                 <div class="episodes-item__thumb">
                   <img
@@ -1026,7 +1116,7 @@
             class="row row-cols-lg-4 row-cols-md-3 bottom-episodes pc-episodes"
           >
             <!-- PODCAST 1 -->
-            <div class="col">
+            <div class="col" data-aos="flip-left">
               <article class="episodes-item">
                 <div class="episodes-item__thumb">
                   <img
@@ -1070,7 +1160,7 @@
             </div>
 
             <!-- PODCAST 2 -->
-            <div class="col">
+            <div class="col" data-aos="flip-right">
               <article class="episodes-item reversed-item">
                 <div class="episodes-item__thumb">
                   <img
@@ -1113,7 +1203,7 @@
               </article>
             </div>
             <!-- PODCAST 3 -->
-            <div class="col">
+            <div class="col" data-aos="flip-left">
               <article class="episodes-item">
                 <div class="episodes-item__thumb">
                   <img
@@ -1156,7 +1246,7 @@
               </article>
             </div>
             <!-- PODCAST 4 -->
-            <div class="col">
+            <div class="col" data-aos="flip-right">
               <article class="episodes-item reversed-item">
                 <div class="episodes-item__thumb">
                   <img
@@ -1211,7 +1301,7 @@
             class="row row-cols-lg-4 row-cols-md-3 bottom-episodes pc-episodes"
           >
             <!-- PODCAST 1 -->
-            <div class="col">
+            <div class="col" data-aos="flip-left">
               <article class="episodes-item">
                 <div class="episodes-item__thumb">
                   <img
@@ -1254,7 +1344,7 @@
             </div>
 
             <!-- PODCAST 2 -->
-            <div class="col">
+            <div class="col" data-aos="flip-right">
               <article class="episodes-item reversed-item">
                 <div class="episodes-item__thumb">
                   <img
@@ -1296,7 +1386,7 @@
               </article>
             </div>
             <!-- PODCAST 3 -->
-            <div class="col">
+            <div class="col" data-aos="flip-left">
               <article class="episodes-item">
                 <div class="episodes-item__thumb">
                   <img
@@ -1338,7 +1428,7 @@
               </article>
             </div>
             <!-- PODCAST 4 -->
-            <div class="col">
+            <div class="col" data-aos="flip-right">
               <article class="episodes-item reversed-item">
                 <div class="episodes-item__thumb">
                   <img
@@ -1434,7 +1524,7 @@
         <div class="container g-lg-3 g-2">
           <div class="row">
             <!-- QUOTES THUMB -->
-            <div class="col col-md-6 col-12">
+            <div class="col col-md-6 col-12" data-aos="fade-right">
               <figure class="quotes-thumb">
                 <div class="quotes-thumb__box quotes-thumb__box--left">
                   <img
@@ -1469,7 +1559,10 @@
             </div>
 
             <!-- QUOTES DETAIL -->
-            <div class="col col-lg-5 offset-lg-1 col-md-6 offset-0 col-12">
+            <div
+              class="col col-lg-5 offset-lg-1 col-md-6 offset-0 col-12"
+              data-aos="fade-left"
+            >
               <article class="quotes-detail">
                 <img
                   src="./assets/img/quotes-vector.svg"
@@ -1548,7 +1641,7 @@
       <!-- SUBS -->
       <section class="subs">
         <div class="container g-lg-3 g-2">
-          <div class="subs-container">
+          <div class="subs-container" data-aos="zoom-out-up">
             <!-- TOP SUBS -->
             <div class="row top-subs">
               <div class="col col-md-5 offset-md-1 col-12">
@@ -1855,5 +1948,13 @@
         </div>
       </div>
     </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+      });
+    </script>
   </body>
 </html>

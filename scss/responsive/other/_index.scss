@@ -8,6 +8,19 @@
   .header {
     padding-top: 2rem;
     top: -1rem;
+    .row {
+      .mobile-nav {
+        .mobile-nav__rail-nav {
+          width: 65vw;
+        }
+
+        .mobile-nav__layer--check {
+          &:checked ~ .mobile-nav__rail-nav {
+            transform: translateX(35vw);
+          }
+        }
+      }
+    }
   }
 
   /*HERO*/
