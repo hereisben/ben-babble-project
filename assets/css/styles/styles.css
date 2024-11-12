@@ -245,6 +245,10 @@ h3 {
 .header .header-nav .header-nav__list .header-nav__item:hover label {
   display: block;
 }
+.header .header-nav .header-nav__list .header-nav__item:has(.header-nav__subitem--checkbox:checked) label {
+  transform: rotate(135deg);
+  top: 2.2rem;
+}
 .header .header-nav .header-nav__list .header-nav__item.header-nav__item--episodes:hover, .header .header-nav .header-nav__list .header-nav__item.header-nav__item--episodes:has(.header-nav__subitem--checkbox:checked) {
   width: 8.7rem;
 }
@@ -258,7 +262,9 @@ h3 {
   width: 5.1rem;
 }
 .header .header-nav .header-nav__list .header-nav__item .header-nav__item--link {
-  display: inline-block;
+  display: flex;
+  height: 4.8rem;
+  align-items: center;
 }
 .header .header-nav .header-nav__list .header-nav__item label {
   cursor: pointer;
@@ -268,7 +274,7 @@ h3 {
   border: 1px solid;
   border-color: transparent transparent #665f73 #665f73;
   right: 0rem;
-  top: 0.9rem;
+  top: 1.9rem;
   transform: rotate(-45deg);
   z-index: 1;
   background-color: #fff8f3;
@@ -282,7 +288,15 @@ h3 {
   display: block;
 }
 .header .header-nav .header-nav__list .header-nav__item .header-nav__sublist .header-nav__subitem--link {
+  font-size: 1.4rem;
   display: none;
+}
+.header .header-nav .header-nav__list .header-nav__item .header-nav__sublist .header-nav__subitem:hover .header-nav__subitem--link {
+  font-weight: 600;
+}
+.header .header-nav .header-nav__list .header-nav__item:has(.header-nav__subitem--checkbox:checked) .header-nav__item--link {
+  font-weight: 600;
+  color: #201830;
 }
 .header .auth-bar {
   gap: 2.8rem;

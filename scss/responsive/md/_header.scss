@@ -3,37 +3,42 @@
     .header-nav {
       margin-left: 2.2rem;
       .header-nav__list {
-        gap: 2.8rem;
+        gap: 2.1rem;
 
         .header-nav__item {
           label {
             right: 0rem;
           }
 
+          .header-nav__item--link {
+            font-size: 1.4rem;
+            line-height: 2.8rem;
+          }
+
           &.header-nav__item--episodes:hover,
           &.header-nav__item--episodes:has(
               .header-nav__subitem--checkbox:checked
             ) {
-            width: 7.7rem;
+            width: 8rem;
           }
 
           &.header-nav__item--trending:hover,
           &.header-nav__item--trending:has(
               .header-nav__subitem--checkbox:checked
             ) {
-            width: 7.1rem;
+            width: 7.5rem;
           }
 
           &.header-nav__item--category:hover,
           &.header-nav__item--category:has(
               .header-nav__subitem--checkbox:checked
             ) {
-            width: 7.8rem;
+            width: 8rem;
           }
 
           &.header-nav__item--blog:hover,
           &.header-nav__item--blog:has(.header-nav__subitem--checkbox:checked) {
-            width: 5.1rem;
+            width: 4.8rem;
           }
         }
       }

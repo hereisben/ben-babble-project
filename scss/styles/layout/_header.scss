@@ -46,6 +46,11 @@
           }
         }
 
+        &:has(.header-nav__subitem--checkbox:checked) label {
+          transform: rotate(135deg);
+          top: 2.2rem;
+        }
+
         &.header-nav__item--episodes:hover,
         &.header-nav__item--episodes:has(
             .header-nav__subitem--checkbox:checked
@@ -73,7 +78,9 @@
         }
 
         .header-nav__item--link {
-          display: inline-block;
+          display: flex;
+          height: 4.8rem;
+          align-items: center;
           @extend %desc-2;
         }
 
@@ -86,7 +93,7 @@
           border: 1px solid;
           border-color: transparent transparent #{utils.$dim-gray-color} #{utils.$dim-gray-color};
           right: 0rem;
-          top: 0.9rem;
+          top: 1.9rem;
           // top: 50%;
           transform: rotate(-45deg);
           z-index: 1;
@@ -107,8 +114,22 @@
         .header-nav__sublist {
           .header-nav__subitem--link {
             @extend %desc-2;
+            font-size: 1.4rem;
             display: none;
           }
+
+          .header-nav__subitem {
+            &:hover {
+              .header-nav__subitem--link {
+                font-weight: 600;
+              }
+            }
+          }
+        }
+
+        &:has(.header-nav__subitem--checkbox:checked) .header-nav__item--link {
+          font-weight: 600;
+          color: #{utils.$dark-gunmetal-color};
         }
       }
     }
